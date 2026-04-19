@@ -1,14 +1,14 @@
 # Snake Game
 
-A classic Snake game built with vanilla JavaScript and HTML5 Canvas. The snake moves around the board, eats food to grow longer, and the player controls direction using arrow keys.
+A classic Snake game built with vanilla JavaScript and HTML5 Canvas featuring score tracking, high score persistence, wall and self-collision detection, game over screen, and restart functionality.
 
 ## Overview
 
-This is a browser-based implementation of the classic Snake arcade game. The game renders on an HTML5 Canvas element and uses JavaScript for game logic including snake movement, collision detection with food, and dynamic food placement. The game runs on a simple interval-based game loop.
+This is a browser-based implementation of the classic Snake arcade game. The game renders on an HTML5 Canvas element with a grid overlay and uses JavaScript for game logic including snake movement, collision detection, scoring, and dynamic food placement. The game features a polished dark-themed UI with score tracking that persists across sessions using localStorage.
 
 ## Purpose
 
-Built as a personal project to practice JavaScript fundamentals, HTML5 Canvas rendering, and game development concepts like game loops, user input handling, and real-time state management.
+Built as a personal project to practice JavaScript fundamentals, HTML5 Canvas rendering, browser storage APIs, and game development concepts like game loops, collision detection, state management, and user input handling.
 
 ## Technologies Used
 
@@ -18,18 +18,23 @@ Built as a personal project to practice JavaScript fundamentals, HTML5 Canvas re
 
 ## Features
 
-- **Arrow key controls** - Move the snake in four directions using the keyboard
-- **Food collection** - Snake grows longer each time it eats the randomly placed food
-- **Dynamic food spawning** - New food appears at a random position after each collection
-- **Smooth animation** - Game updates at a consistent 200ms interval for fluid movement
-- **Grid-based movement** - Snake moves on a clean 20px grid system
+- **Arrow key controls** - Move the snake in four directions (with reverse-direction prevention)
+- **Score tracking** - Earn 10 points per food collected, displayed in real time
+- **High score persistence** - Best score saved to localStorage across browser sessions
+- **Wall collision** - Game ends when the snake hits the canvas boundary
+- **Self collision** - Game ends when the snake runs into its own body
+- **Game over screen** - Overlay displaying final score with restart prompt
+- **Restart with Space** - Quick restart without refreshing the page
+- **Visual polish** - Dark theme, grid overlay, distinct head/body colors, circular food
+- **Smart food placement** - Food never spawns on the snake's body
+- **Smooth animation** - Game updates at 150ms intervals for responsive gameplay
 
 ## How to Run
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rmayen/BasicSnakeGame.git
-   cd BasicSnakeGame/snakeGame
+   git clone https://github.com/rmayen/snake-game.git
+   cd snake-game/snakeGame
    ```
 2. Open `index.html.html` in any modern web browser.
 
@@ -43,23 +48,25 @@ That's it! No build tools, dependencies, or server required.
 | Arrow Down | Move down |
 | Arrow Left | Move left |
 | Arrow Right | Move right |
+| Space | Restart game after game over |
 
 ## Project Structure
 
 ```
-BasicSnakeGame/
+snake-game/
 └── snakeGame/
-    ├── index.html.html   # Game page with canvas element
-    └── script.js         # Game logic (snake, food, movement, rendering)
+    ├── index.html.html   # Game page with canvas, scoreboard, and dark-themed UI
+    └── script.js         # Game logic (snake, food, collision, scoring, high score)
 ```
 
 ## My Role
 
-I built this game from scratch as a personal project. I implemented the canvas rendering, snake movement and growth mechanics, food spawning logic, and keyboard input handling.
+I built this game from scratch as a personal project. I implemented the canvas rendering, snake movement and growth mechanics, wall and self-collision detection, scoring system with localStorage persistence, game over/restart flow, and a polished dark-themed UI.
 
 ## Lessons Learned
 
-- Gained hands-on experience with HTML5 Canvas for 2D rendering
-- Learned to implement a game loop using `setInterval` for consistent frame updates
+- Gained hands-on experience with HTML5 Canvas for 2D rendering and grid-based drawing
+- Learned to implement a game loop with proper state management (running, game over, restart)
+- Practiced using localStorage for persistent data across browser sessions
+- Understood collision detection algorithms for both boundary and self-intersection checks
 - Practiced event-driven programming with keyboard event listeners
-- Understood grid-based movement systems commonly used in classic arcade games
