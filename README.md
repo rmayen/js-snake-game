@@ -14,7 +14,7 @@ Built as a personal project to practice JavaScript fundamentals, HTML5 Canvas re
 
 - **JavaScript** - Game logic, input handling, and rendering
 - **HTML5 Canvas** - 2D game rendering
-- **CSS** - Basic page styling
+- **CSS** - Page styling
 
 ## Features
 
@@ -33,10 +33,10 @@ Built as a personal project to practice JavaScript fundamentals, HTML5 Canvas re
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rmayen/snake-game.git
-   cd snake-game/snakeGame
+   git clone https://github.com/rmayen/js-snake-game.git
+   cd js-snake-game
    ```
-2. Open `index.html.html` in any modern web browser.
+2. Open `index.html` in any modern web browser.
 
 That's it! No build tools, dependencies, or server required.
 
@@ -53,10 +53,10 @@ That's it! No build tools, dependencies, or server required.
 ## Project Structure
 
 ```
-snake-game/
-└── snakeGame/
-    ├── index.html.html   # Game page with canvas, scoreboard, and dark-themed UI
-    └── script.js         # Game logic (snake, food, collision, scoring, high score)
+js-snake-game/
+├── index.html   # Game page with canvas and scoreboard
+├── styles.css   # Dark-themed UI styles
+└── script.js    # Game logic (snake, food, collision, scoring, high score)
 ```
 
 ## My Role
